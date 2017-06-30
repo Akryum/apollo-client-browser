@@ -1,5 +1,5 @@
 # apollo-client-browser
-A browser-ready version of apollo-client [demo](https://jsfiddle.net/Akryum/oyejk2qL/)
+A browser-ready version of apollo-client: [demo](https://jsfiddle.net/Akryum/oyejk2qL/)
 
 ```html
 <script src="https://unpkg.com/apollo-client-browser@1.7.0"></script>
@@ -7,6 +7,7 @@ A browser-ready version of apollo-client [demo](https://jsfiddle.net/Akryum/oyej
 <script>
 const apolloClient = new Apollo.lib.ApolloClient({
   networkInterface: Apollo.lib.createNetworkInterface({
+    // Edit on https://launchpad.graphql.com/nnnwvmq07
     uri: 'https://nnnwvmq07.lp.gql.zone/graphql',
     transportBatching: true,
   }),
