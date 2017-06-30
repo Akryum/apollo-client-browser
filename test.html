@@ -1,0 +1,70 @@
+<html>
+
+<body>
+  <!-- Include the library in the page -->
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/apollo-client-browser@0.0.5"></script>
+  <script src="https://unpkg.com/vue-apollo@2.1.0-beta.18"></script>
+
+  <!-- App -->
+  <div id="app">
+    <h1>Blog</h1>
+    <div>
+      <article v-for="post of posts">
+        <div class="title">{{ post.title }}</div>
+        <div class="author">By {{ post.author.name }}</div>
+      </article>
+    </div>
+  </div>
+
+  <script>
+
+console.clear()
+
+Vue.use(VueApollo)
+
+const apolloClient = new Apollo.lib.ApolloClient({
+  networkInterface: Apollo.lib.createNetworkInterface({
+    uri: 'https://nnnwvmq07.lp.gql.zone/graphql',
+    transportBatching: true,
+  }),
+  connectToDevTools: true,
+})
+
+const apolloProvider = new VueApollo.ApolloProvider({
+  defaultClient: apolloClient,
+})
+
+const POSTS_QUERY = Apollo.gql`
+{
+  posts {
+    id
+    title
+    author {
+      id
+      name
+    }
+  }
+}
+`
+
+// New VueJS instance
+const app = new Vue({
+  // CSS selector of the root DOM element
+  el: '#app',
+  data: {
+  	posts: [],
+  },
+  // Apollo GraphQL
+  apolloProvider,
+  apollo: {
+    posts: POSTS_QUERY,
+  },
+})
+
+    console.log(app)
+
+
+  </script>
+
+</body>
