@@ -1,6 +1,6 @@
 {
   "name": "apollo-client-browser",
-  "version": "1.7.0",
+  "version": "1.9.0",
   "description": "A browser-ready version of apollo-client",
   "main": "dist/apollo-client.min.js",
   "unpkg": "dist/apollo-client.min.js",
@@ -39,7 +39,7 @@
     "uglify-js-harmony": "^2.7.7"
   },
   "dependencies": {
-    "apollo-client": "^1.7.0",
+    "apollo-client": "1.9.0-1",
     "graphql": "^0.10.3",
     "graphql-tag": "^2.4.2"
   }
