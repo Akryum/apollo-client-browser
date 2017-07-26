@@ -1,4 +1,6 @@
 # apollo-client-browser
+[![npm](https://img.shields.io/npm/v/apollo-client-browser.svg) ![npm](https://img.shields.io/npm/dm/apollo-client-browser.svg)](https://www.npmjs.com/package/apollo-client-browser)
+
 A browser-ready version of apollo-client: [demo](https://jsfiddle.net/Akryum/oyejk2qL/)
 
 ```html
